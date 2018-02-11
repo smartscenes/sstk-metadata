@@ -1,0 +1,2 @@
+# metadata
+SmartScenes metadata files
