@@ -8,5 +8,5 @@ matterport3d.csv - list of matterport3d houses
 
 # List of semantic types
 roomTypes.csv - list of matterport roomtypes
-../labels/mpr40.tsv - list of matterport semantic types
+../labels/mpr40.tsv - list of matterport semantic object types (40 categories)
 ```
