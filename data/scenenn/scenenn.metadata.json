@@ -1,0 +1,24 @@
+{
+  "source": "scenenn",
+  "assetType": "scan",
+  "rootPath": "${baseUrl}/scenenn/",
+  "screenShotPath": "${rootPath}/${id}/${id}.png",
+  "idsFile": "${rootPath}/scenenn.csv",
+  "defaultMaterialType": "phong",
+  "hasThumbnails": false,
+  "formats": [
+    { "format": "ply",
+      "path": "${rootPath}/${id}/${id}.ply",
+      "defaultUp": [ 0, 1, 0 ], "defaultFront": [ 0, 0, 1], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true 
+    }
+  ],
+  "surfaces": {
+    "format": "segmentGroups",
+    "files": {
+        "segmentGroups": "${rootPath}/${id}/${id}.anns.json",
+            "segments": "${rootPath}/${id}/${id}.segs.json"
+    }
+  }
+}
