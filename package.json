@@ -1,0 +1,15 @@
+{
+  "name": "sstk-metadata",
+  "version": "0.1.0",
+  "description": "SmartScenes Metadata: metadata for using various datasets with the sstk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartscenes/metadata.git"
+  },
+  "author": "Manolis Savva <manolis.savva@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartscenes/metadata/issues"
+  },
+  "homepage": "https://github.com/smartscenes/metadata"
+}
