@@ -1,0 +1,45 @@
+{
+  "source": "nyuv2",
+  "assetType": "scan",
+  "rootPath": "${baseUrl}/nyuv2",
+  "screenShotPath": "${rootPath}/${id}/${id}_vh_clean_2.png",
+  "hasThumbnails": true,
+  "assetFields": ["surfaces", "surfaces-fine", "surfaces-finest", "segment-annotations-raw", "scan-model-alignments"],
+  "formats": [
+    { "format": "ply",
+      "path": "${rootPath}/${id}/${id}_vh_clean_2.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true 
+    }
+  ],
+  "surfaces": {
+    "format": "segmentGroups",
+    "files": {
+      "segmentGroups": "${rootPath}/${id}/${id}.aggregation.json",
+      "segments": "${rootPath}/${id}/${id}_vh_clean_2.0.010000.segs.json"
+    }
+  },
+  "surfaces-fine": {
+    "format": "segmentGroups",
+    "file": "${rootPath}/${id}/${id}_vh_clean_2.0.001000.segs.json"
+  },
+  "surfaces-finest": {
+    "format": "segmentGroups",
+    "file": "${rootPath}/${id}/${id}_vh_clean_2.0.000100.segs.json"
+  },
+  "segment-annotations-raw": {
+    "format": "segmentGroups",
+    "files": {
+      "annIds": "${baseUrl}/scans/segment-annotations/list?itemId=${fullId}&$columns=id,workerId,data&format=json",
+      "segmentGroups": "${baseUrl}/scans/segment-annotations/aggregated?annId=${annId}",
+      "segments": "${rootPath}/${id}/${id}_vh_clean_2.0.010000.segs.json"
+    }
+  },
+  "scan-model-alignments": {
+    "files": {
+      "annIds": "${baseUrl}/annotations/list?itemId=${fullId}&$columns=id,workerId,data&format=json&type=scan-model-align",
+      "annotatedAssetIds": "${baseUrl}/annotations/list?$columns=itemId&format=json&type=scan-model-align"
+    }
+  }
+}
