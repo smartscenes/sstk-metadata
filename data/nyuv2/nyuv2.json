@@ -1,7 +1,7 @@
 {
   "source": "nyuv2",
   "assetType": "scan",
-  "rootPath": "${baseUrl}/nyuv2",
+  "rootPath": "${baseUrl}/nyuv2/scans",
   "screenShotPath": "${rootPath}/${id}/${id}_vh_clean_2.png",
   "hasThumbnails": true,
   "assetFields": ["surfaces", "surfaces-fine", "surfaces-finest", "segment-annotations-raw", "scan-model-alignments"],
