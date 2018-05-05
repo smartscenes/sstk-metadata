@@ -1,3 +1,4 @@
+Metadata files for using the SSTK with ShapeNet models.  Please visit the [ShapeNet](https://www.shapenet.org/) website for requesting access to the model data.
 
 ```
 # Metadata files (these metadata files specify to location of the mesh, preview images, etc for each asset)

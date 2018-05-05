@@ -1,3 +1,5 @@
+Metadata files for using the SSTK with SUNCG object and scene models.  Please visit the [SUNCG](http://suncg.cs.princeton.edu/) project website to request download access to the data.
+
 ```
 # Metadata files (these metadata files specify to location of the mesh, preview images, etc for each asset)
 suncg.planner5d.models.json - Metadata file for hooking up SUNCG models 
