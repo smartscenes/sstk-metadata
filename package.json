@@ -1,6 +1,6 @@
 {
   "name": "sstk-metadata",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "SmartScenes Metadata: metadata for using various datasets with the sstk",
   "repository": {
     "type": "git",
