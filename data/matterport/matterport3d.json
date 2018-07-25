@@ -1,16 +1,17 @@
 {
   "source": "mp3d",
-  "assetType": "model",
+  "assetType": "scan",
   "rootPath": "${baseUrl}/matterport/data/public_extracted/v1",
   "rootPathLocal": "${baseUrl}/mp3d",
   "screenShotPath": "${baseUrl}/matterport/data/public/v1/scans_extra/video/${id}/${id}-0000.png",
   "video": "${baseUrl}/matterport/data/public/v1/scans_extra/video/${id}/${id}.mp4",
-  "assetFields": ["navmap", "regions", "video", "partSource", "panoramas"],
+  "assetFields": ["navmap", "regions", "video", "partSource", "panoramas", "objectInstanceMaterials"],
   "formats": [
     { "name": "matterport-glb",
       "format": "glb",
       "path": "${rootPath}/scans/${id}/matterport_mesh/${meshId}/${meshId}.merged.glb",
       "groupMeshes": true,
+      "options": { "ignoreOcclusionTexture": true },
       "defaultUp": [ 0, 0, 1 ], "defaultFront": [ -1, 0, 0], "defaultUnit": 1,
       "defaultMaterialType": "basic"
     },
@@ -35,6 +36,12 @@
       "defaultMaterialType": "basic"
     }
   ],
+  "objectInstanceMaterials": {
+    "assetType": "materials",
+    "format": "mtl",
+    "path": "${rootPath}/scans/${id}/instances_mesh/${meshId}.mtl",
+    "defaultMaterialType": "basic"
+  },
   "navmap": {
     "assetType": "navmap",
     "encoding": "json",
