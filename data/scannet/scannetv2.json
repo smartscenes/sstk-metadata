@@ -1,0 +1,102 @@
+{
+  "source": "scannetv2",
+  "solrUrl": "${baseUrl}/solr/scannetv2",
+  "assetType": "scan",
+  "rootPath": "${baseUrl}/scannet/v2/data",
+  "screenShotPath": "${rootPath}/scans_extra/renders/${id}/${id}.color.png",
+  "screenShotPaths": [
+    { "name": "original", "path": "${rootPath}/scans_extra/renders/${id}/${id}.color.png" },
+    { "name": "category", "path": "${rootPath}/scans_extra/renders/${id}/${id}.category.png" },
+    { "name": "instance", "path": "${rootPath}/scans_extra/renders/${id}/${id}.instance.png" },
+    { "name": "mpr40", "path": "${rootPath}/scans_extra/renders/${id}/${id}.mpr40.png" },
+    { "name": "nyu40", "path": "${rootPath}/scans_extra/renders/${id}/${id}.nyu40.png" }
+  ],
+  "hasThumbnails": true,
+  "assetFields": ["video", "trajectory", "voxels-labeled", "surfaces", "alignments", "preload", "hasModel", "labelMappings"],
+  "video": "${rootPath}/scans_extra/video/${id}/${id}.mp4",
+  "trajectory": "${rootPath}/scans_extra/video/${id}/${id}.traj.json",
+  "voxels-labeled": "${rootPath}/scans_extra/vox/${id}.vox",
+  "preload": [ "alignments" ],
+  "hasModel": true,
+  "formats": [
+    {
+      "name": "decimated",
+      "format": "ply",
+      "path": "${rootPath}/scans/${id}/${id}_vh_clean_2.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    },
+    {
+      "name": "hires",
+      "format": "ply",
+      "path": "${rootPath}/scans/${id}/${id}_vh_clean.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    },
+    {
+      "name": "category",
+      "format": "ply",
+      "path": "${rootPath}/scans_extra/annotated/${id}/${id}.categories.annotated.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    },
+    {
+      "name": "instance",
+      "format": "ply",
+      "path": "${rootPath}/scans_extra/annotated/${id}/${id}.instances.annotated.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    },
+    {
+      "name": "mpr40",
+      "format": "ply",
+      "path": "${rootPath}/scans_extra/annotated/${id}/${id}.mpr40.annotated.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    },
+    {
+      "name": "nyu40",
+      "format": "ply",
+      "path": "${rootPath}/scans_extra/annotated/${id}/${id}.nyu40.annotated.ply",
+      "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+      "useVertexColors": true,
+      "computeNormals": true,
+      "materialSidedness": "Front",
+      "defaultMaterialType": "phong"
+    }
+  ],
+  "labelMappings": {
+    "path": "${rootPath}/scannet-labels.combined.tsv",
+    "remapCategoryField": "raw_category",
+    "categoryField": "category",
+    "indexField": "id"
+  },
+  "alignments": {
+    "assetType": "alignmentMatrix",
+    "encoding": "utf8",
+    "path": "${rootPath}/scans_extra/alignments/${id}.aln"
+  },
+  "surfaces": {
+    "format": "segmentGroups",
+    "files": {
+        "segmentGroups": "${rootPath}/scans/${id}/${id}.aggregation.json",
+        "segments": "${rootPath}/scans/${id}/${id}_vh_clean_2.0.010000.segs.json",
+        "statistics": "${rootPath}/scans_extra/scannet.ann.stats.csv"
+    }
+  }
+}
