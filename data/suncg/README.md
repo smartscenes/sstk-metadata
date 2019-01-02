@@ -9,7 +9,10 @@ suncg.planner5d.textures.json	- Metadata file for hooking up SUNCG textures
 suncg.poses.models.json - Metadata file for hooking up SUNCG poses
 
 # List of asset ids
-suncg.planner5d.models.full.csv	- List of model ids along with their categories, and other metedata
+suncg.planner5d.models.v1.csv	- List of model ids along with their categories, and other metadata for SUNCG v1
+suncg.planner5d.models.v2.csv	- List of model ids along with their categories, and other metadata for SUNCG v2 (better subcategories, and more annotations such as `setIds`, symmetry/corner information)
+ModelCategoryMapping.v1.csv - Original reduced metadata information for SUNCG v1
+ModelCategoryMapping.v2.csv - Similar reduced metadata information augmented for SUNCG v2
 suncg.planner5d.textures.csv - List of texture ids
 suncg.poses.models.csv	- List of SUNCG pose models
 
