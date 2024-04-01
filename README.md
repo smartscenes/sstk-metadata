@@ -11,6 +11,7 @@ SmartScenes metadata files to hookup supported assets with the [SSTK](https://gi
 | [v0.1](data/scannet) | [ScanNet](http://www.scan-net.org/)  | Reconstructions      | ~1500 scans of ~700 regions and rooms |
 | [v0.1](data/nyuv2) | [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)  | Reconstructions      | ~500 scans |
 | [v0.1](data/matterport) | [Matterport3D](https://github.com/niessner/Matterport) | Reconstructions      |    90 houses with over 2000 regions |
+| [v0.1](data/structured3d) | [Structured3D](https://structured3d-dataset.org/) | Synthetic Scenes      |    3.5K house designs |
 | Coming soon | [SceneNN](http://people.sutd.edu.sg/~saikit/projects/sceneNN/) | Reconstructions | |
 | Coming soon | [2D-3D-S](http://buildingparser.stanford.edu/dataset.html) | Reconstructions | |
 
