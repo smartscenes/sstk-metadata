@@ -1,0 +1,38 @@
+{
+  "name": "3dfModel",
+  "assetType": "model",
+  "solrUrl": "${baseUrl}/solr/models3d",
+  "rootPath": "${baseUrl}/data/3dfront",
+  "idsFileUnused": "${rootPath}/model_info.csv",
+  "hasThumbnails": false,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ 0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+    "assetPath": "${rootPath}/3D-FUTURE-model/${id}"
+  },
+  "dataTypes": {
+    "mesh": {
+      "defaultOptions": { "computeNormals": false, "skipMtl": false, "materialSidedness": "double" },
+      "data": [
+        {
+          "name": "obj",
+          "format": "obj",
+          "path": "${assetPath}/raw_model.obj",
+          "texture": "${assetPath}/texture.png"
+        },
+        {
+          "name": "normalized",
+          "format": "obj",
+          "path": "${assetPath}/normalized_model.obj",
+          "texture": "${assetPath}/texture.png"
+        }
+      ]},
+    "image": [
+      { "name": "screenshot", "path":  "${assetPath}/image.jpg"}
+    ]
+  }
+}

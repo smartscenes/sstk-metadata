@@ -1,0 +1,30 @@
+{
+  "name": "3dfScene",
+  "assetType": "scene",
+  "idsFile": "${baseUrl}/data/3dfront/scene_info.csv",
+  "rootPath": "${baseUrl}/data/3dfront/3D-FRONT",
+  "hasThumbnails": false,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ 0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+  },
+  "dataTypes": {
+    "scene": {
+      "defaultOptions": { "computeNormals": false, "materialSidedness": "front" },
+      "data": [
+        {
+          "name": "3dfront",
+          "format": "3dfront",
+          "path": "${rootPath}/${id}.json"
+        }
+      ]},
+    "image": [
+      { "name": "screenshot", "path":  "${rootPath}-renders/${id}.png"},
+      { "name": "originalImage", "path":  "${rootPath}-renders/${id}.png"}
+    ]
+  }
+}
