@@ -1,0 +1,27 @@
+{
+  "name": "s3dArch",
+  "assetType": "arch",
+  "assetIdField": "sceneId",
+  "idsFile": "${assetsDir}/data/structured3d/structured3d.scenes.csv",
+  "rootPath": "${baseUrl}/data/structured3d",
+  "hasThumbnails": false,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ -1, 0, 0],
+  "defaultUnit": 1,
+  "dataTypes": {
+    "arch": {
+      "data": [
+        {
+          "name": "arch",
+          "path": "${rootPath}/arch/${sceneId}.arch.json"
+        }
+      ]},
+    "image": [
+      { "name": "screenshot", "path":  "${rootPath}/arch_renders/textured/${sceneId}.png"},
+      { "name": "roomId", "path":  "${rootPath}/arch_renders/roomId/images/${sceneId}.roomId.png"}
+    ]
+  }
+}
