@@ -1,6 +1,13 @@
 # metadata
 SmartScenes metadata files to hookup supported assets with the [SSTK](https://github.com/smartscenes/sstk)
 
+To hookup the metadata to the SSTK, follow the instructions in the respective READMEs for each asset type
+and add the appropriate metadata files to:
+- [${STK}/server/static/data/assets-extra.json](https://github.com/smartscenes/sstk/blob/master/server/static/data/assets-extra.json) for use with SSTK webapp
+- [${STK}/server/ssc/data/assets.json](https://github.com/smartscenes/sstk/blob/master/ssc/data/assets.json) for use with SSTK headless rendering
+
+See [SSTK wiki on how to prepare assets](https://github.com/smartscenes/sstk/wiki/Preparing-assets-for-annotation) for more information.
+
 ## Supported dataset metadata summary
 
 | metadata | Dataset       | Type       | Size |

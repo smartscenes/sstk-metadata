@@ -1,0 +1,46 @@
+{
+  "name": "fpModel",
+  "assetType": "model",
+  "solrUrl": "${baseUrl}/solr/models3d",
+  "rootPath": "${baseUrl}/data/hssd",
+  "hasThumbnails": true,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ 0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+    "isDecomposed": "<%= !!vars.decomposedFrom %>",
+    "isNotDecomposed": "<%= !vars.isDecomposed %>",
+    "hasThumbnail": "${isNotDecomposed}",
+    "assetPath": "<%= vars.rootPath + ((vars.isDecomposed)? '/hssd-models/decomposed' : '/hssd-models/objects') %>",
+    "assetGlbPath": "<%= vars.assetPath + ((vars.isDecomposed)? '/decomposed' : '/glb') %>",
+    "assetRendersPath": "<%= vars.assetPath + ((vars.isDecomposed)? '/renders' : '/renders/with-envmap') %>",
+    "assetHabPath": "<%= vars.rootPath + ((vars.isDecomposed)? '/hssd-hab/objects/decomposed' : '/hssd-hab/objects') %>",
+    "splitAssetSubdir": "<%= (vars.isDecomposed)? vars.decomposedFrom : ((vars.id.includes('-'))? 'openings' : vars.id.charAt(0)) %>"
+  },
+  "dataTypes": {
+    "mesh": {
+      "data": [
+        {
+          "name": "glb-hab",
+          "format": "glb",
+          "path": "${assetHabPath}/${splitAssetSubdir}/${id}.glb"
+        },
+        {
+          "name": "glb-original",
+          "format": "glb",
+          "path": "${assetGlbPath}/${splitAssetSubdir}/${id}.glb"
+        },
+        {
+          "name": "collider-glb",
+          "format": "glb",
+          "path": "${assetHabPath}/${splitAssetSubdir}/${id}.collider.glb"
+        }
+      ]},
+    "image": [
+      { "name": "screenshot", "path": "${assetRendersPath}/${splitAssetSubdir}/${id}.png", "thumbnail": "${assetRendersPath}/${splitAssetSubdir}/${id}_thumb.png"}
+    ]
+  }
+}
