@@ -35,5 +35,5 @@ ${STRUCTURED3D_ARCH_ROOT}
 To use these assets with the SmartScenes Toolkit (SSTK), 
 ```
 # symlink `${STRUCTURED3D_ARCH_ROOT}` to `${SSTK}/server/static/data/structured3d`
-ln -s ${STRUCTURED3D_ARCH_ROOT} ${SSTK}/server/static/data/3dfront
+ln -s ${STRUCTURED3D_ARCH_ROOT} ${SSTK}/server/static/data/structured3d
 ```
