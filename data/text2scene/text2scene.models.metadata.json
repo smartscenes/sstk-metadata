@@ -1,0 +1,28 @@
+{
+  "name": "t2sModel",
+  "assetType": "model",
+  "idsFile": "${baseUrl}/text2scene/generated/shape/model_info.csv",
+  "rootPath": "${baseUrl}/text2scene/generated/shape/models",
+  "hasThumbnails": false,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [0, 1, 0],
+  "defaultFront": [0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+    "assetPath": "${rootPath}/${id}"
+  },
+  "dataTypes": {
+    "mesh": {
+      "defaultOptions": {"computeNormals": false, "skipMtl": false, "materialSidedness": "front"},
+      "data": [
+        {
+          "name": "obj",
+          "format": "obj",
+          "path": "${assetPath}/raw_model.obj"
+        }
+      ]
+    }
+  }
+}
