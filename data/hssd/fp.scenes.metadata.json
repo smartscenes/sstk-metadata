@@ -1,0 +1,32 @@
+{
+  "name": "fpScene",
+  "assetType": "scene",
+  "solrUrl": "${baseUrl}/solr/scenes",
+  "rootPath": "${baseUrl}/data/hssd",
+  "hasThumbnails": true,
+  "useThumbnails": false,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ 0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+    "assetPath": "${rootPath}/hssd-sstk/scenes"
+  },
+  "dataTypes": {
+    "scene": {
+      "data": [
+        {
+          "format": "cluttered-decomposed",
+          "path": "${assetPath}/cluttered-decomposed/scenestate/${id}.scenestate.json"
+        },
+        {
+          "format": "uncluttered-decomposed",
+          "path": "${assetPath}/uncluttered-decomposed/scenestate/${id}.scenestate.json"
+        }
+      ]},
+    "image": [
+      { "name": "screenshot", "path": "${rootPath}/scene-screenshots/${id}.png", "thumbnail": "${rootPath}/scene-screenshots/${id}_thumb.png"}
+    ]
+  }
+}
