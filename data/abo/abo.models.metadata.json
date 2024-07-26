@@ -1,0 +1,29 @@
+{
+  "name": "abo",
+  "assetType": "model",
+  "rootPath": "${baseUrl}/data/abo",
+  "idsFile": "${rootPath}/3dmodels/metadata/3dmodels.csv",
+  "screenShotDir": "${rootPath}/3dmodels/renders",
+  "hasThumbnails": true,
+  "useThumbnails": true,
+  "defaultImageCount": 1,
+  "defaultImageIndex": 0,
+  "defaultUp": [ 0, 1, 0 ],
+  "defaultFront": [ 0, 0, 1],
+  "defaultUnit": 1,
+  "assetFields": {
+    "subdir": "<%= vars.id.charAt(vars.id.length-1) %>"
+  },
+  "dataTypes": {
+    "mesh": {
+      "data": [
+        {
+          "format": "glb",
+          "path": "${rootPath}/3dmodels/original/${subdir}/${id}.glb"
+        }
+     ]},
+    "image": [
+      { "name": "screenshot", "path": "${screenShotDir}/color/${id}/${id}.png", "thumbnail": "${screenShotDir}/color/${id}/${id}_thumb.png" }
+    ]
+  }
+}
