@@ -10,6 +10,7 @@ To each `assets.json` file, add the following:
 ```
   {
     "name": <dataset-name>,
+    "type": <model|scan|scene>,            # asset type (use "model" for simple mesh, "scan" for scanned mesh, "scene" for composition of 3D assets)
     "metadata": <path to metadata>,
     "ids": <path to CSV with ID>           # omit if using solr to search
   }
@@ -19,6 +20,7 @@ As an example, below is the entry for the NYUv2 dataset in [${STK}/server/static
 ```
   {
     "name": "nyuv2",
+    "type": "scan", 
     "metadata": "${assetsDir}/data/scannet/nyuv2.json",
     "ids": "${assetsDir}/data/scannet/nyuv2.csv"
   }
