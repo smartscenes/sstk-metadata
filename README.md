@@ -10,6 +10,7 @@ To each `assets.json` file, add the following:
 ```
   {
     "name": <dataset-name>,
+    "type": <model|scan|scene>,            # asset type (use "model" for simple mesh, "scan" for scanned mesh, "scene" for composition of 3D assets)
     "metadata": <path to metadata>,
     "ids": <path to CSV with ID>           # omit if using solr to search
   }
@@ -19,6 +20,7 @@ As an example, below is the entry for the NYUv2 dataset in [${STK}/server/static
 ```
   {
     "name": "nyuv2",
+    "type": "scan", 
     "metadata": "${assetsDir}/data/scannet/nyuv2.json",
     "ids": "${assetsDir}/data/scannet/nyuv2.csv"
   }
@@ -30,9 +32,7 @@ See [SSTK wiki on how to prepare assets](https://github.com/smartscenes/sstk/wik
 ## Supported dataset metadata summary
 
 | metadata | Dataset       | Type       | Size |
-| ------------- |:-------------:|:-------------:| -----:|
-| metadata | Dataset       | Type       | Size |
-| ------------- |:-------------:|:-------------:| -----:|
+| --------- |-------------|-------------| -----|
 | [v0.5.3](data/shapenet) | [ShapeNet](www.shapenet.org)  | 3D models | Large dataset of 3D models |
 | [v0.5.4](data/abo) | [ABO](https://amazon-berkeley-objects.s3.amazonaws.com/index.html)  | 3D models | Large dataset of ~8K 3D models |
 | Coming soon |  [Stanford Scene Database](http://graphics.stanford.edu/projects/scenesynth/)    | Synthetic scenes      |  150 rooms |
