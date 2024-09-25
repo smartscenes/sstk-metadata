@@ -1,0 +1,78 @@
+{
+  "name": "multiscan",
+  "assetType": "scan",
+  "rootPath": "${baseUrl}/projects/multiscan/staging",
+  "hasThumbnails": false,
+  "dataTypes": {
+    "image": [
+      {
+        "name": "screenshot", "path": "${rootPath}/${id}/${id}_o3d_thumb.png"
+      }
+    ],
+    "mesh": [
+      {
+        "name": "textured-v1.1",
+        "format": "obj",
+        "path": "${rootPath}/${id}/v1.1/textured_mesh_2048/${id}.obj",
+        "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+        "defaultMaterialType": "basic",
+        "materialSidedness": "Front",
+        "options": { "ignoreZeroRGBs": true, "computeNormals": true, "smooth": false, "keepVertIndices": true }
+      },
+      {
+        "name": "decimated-colored-v1.1",
+        "format": "ply",
+        "path": "${rootPath}/${id}/v1.1/${id}_decimated_colored.ply",
+        "defaultUp": [ 0, 0, 1 ], "defaultFront": [ 0, -1, 0], "defaultUnit": 1,
+        "materialSidedness": "Front",
+        "useVertexColors": true,
+        "computeNormals": true
+      }
+    ],
+    "segment": [
+      {
+        "name": "triseg-hier-v1.1",
+        "format": "indexedSegmentation",
+        "variants": {
+          "varying": ["granularity"],
+          "granularity": ["0.500000", "0.100000", "0.050000"],
+          "name": ["triseg-hier-v1.1", "triseg-fine-hier-v1.1", "triseg-finest-hier-v1.1"],
+          "file": "${rootPath}/${id}/v1.1/segs_tri/${id}_decimated_colored.${granularity}.segs.json"
+        },
+        "createdFrom": { "dataType": "mesh", "name": "decimated-colored-v1.1" }
+      }
+    ],
+    "parts": [
+      {
+        "name": "articulation-parts",
+        "partType": "annotated-segment-triindices",
+        "files": {
+          "parts": "${baseUrl}/annotations/latest?itemId=${fullId}&task=multiscan-annotate&type=segment-triindices"
+        },
+        "createdFrom": {
+          "dataType": "mesh",
+          "name": "textured-v1.1"
+        }
+      }
+    ],
+    "articulations": [
+      {
+        "name": "articulations",
+        "files": {
+          "articulations": "${baseUrl}/articulation-annotations/load-annotations?modelId=${fullId}"
+        },
+        "createdFrom": {
+          "dataType": "mesh",
+          "name": "textured-v1.1"
+        }
+      }
+    ],
+    "alignments":  [
+      {
+        "name": "alignment-to-ref",
+        "file": "${rootPath}/${id}/v1.1/${id}_pair_align.json"
+      }
+    ]
+  }
+}
+  
